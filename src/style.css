@@ -31,11 +31,15 @@
 }
 
 body {
-  padding: 20vh 10vw;
+  padding: 15vh 10vw;
   color: var(--white);
   background-image: var(--gradient);
   background-size: 400%;
   animation: bg-animation 5s infinite alternate;
+}
+
+section {
+  padding: 20vh 0;
 }
 
 a {
@@ -271,6 +275,7 @@ p {
 
 .hero h4 {
   margin-right: 20vw;
+  z-index: 99;
 }
 
 .tree {
@@ -431,10 +436,6 @@ p {
     display: none;
   }
 
-  .hero-content .sponsors-intro {
-    margin-top: 30rem;
-  }
-
   .desktop-main-menu {
     display: none;
   }
@@ -459,41 +460,6 @@ p {
   h2 {
     font-size: var(--small);
   }
-  .hero h4 {
-    margin-top: 22rem;
-  }
-  .wave,
-  .surfer {
-    display: block;
-  }
-  .wave {
-    top: 30vh;
-    height: 35vh;
-    right: 0;
-  }
-
-  .surfer {
-    top: 45vh;
-    height: 20vh;
-    right: 8vh;
-  }
-  @keyframes wave-animation {
-    0% {
-      right: -50%;
-    }
-    100% {
-      right: 0;
-    }
-  }
-
-  @keyframes surfer-animation {
-    0% {
-      right: -50%;
-    }
-    100% {
-      right: 8vh;
-    }
-  }
 
   .body {
     width: 100vw;
@@ -504,26 +470,5 @@ p {
   }
   .item {
     width: 80vw;
-  }
-}
-@media (max-width: 380px) {
-  .hero h4 {
-    margin-top: 15rem;
-  }
-
-  .hero h2 {
-    margin-top: 0;
-  }
-
-  .wave {
-    top: 30vh;
-    height: 35vh;
-    right: 0;
-  }
-
-  .surfer {
-    top: 45vh;
-    height: 20vh;
-    right: 8vh;
   }
 }
