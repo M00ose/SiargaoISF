@@ -31,7 +31,6 @@
 }
 
 body {
-  padding: 15vh 10vw;
   color: var(--white);
   background-image: var(--gradient);
   background-size: 400%;
@@ -39,7 +38,7 @@ body {
 }
 
 section {
-  padding: 20vh 0;
+  padding: 20vh 10vw;
 }
 
 a {
@@ -270,12 +269,32 @@ p {
 }
 
 .hero {
-  padding: 0 5vw;
+  /* padding: 0 5vw; */
+  padding: 0;
+  margin: 10vh 0 0 0;
 }
 
-.hero h4 {
-  margin-right: 20vw;
-  z-index: 99;
+/* Use a hidden utility class to temporarily hide hero content while finalizing the rest of the content*/
+
+.hidden {
+  display: none;
+}
+
+/* Temporary hero content */
+.hero-bg {
+  width: 40vw;
+  height: auto;
+  box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
+  -webkit-box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
+  -moz-box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 3rem 10rem;
 }
 
 .tree {
@@ -427,13 +446,34 @@ p {
 
 /* Media Queries */
 @media (max-width: 960px) {
+  body {
+    width: 100vw;
+    padding: 10vh 0;
+  }
   .hamburger > * {
     display: block;
   }
-  .tree,
+  /* .tree,
   .wave,
   .surfer {
     display: none;
+  } */
+
+  .hero {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-bg {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-content {
+    padding: 0 5vw;
   }
 
   .desktop-main-menu {
@@ -451,9 +491,6 @@ p {
   }
 }
 @media (max-width: 600px) {
-  body {
-    padding: 15vh 10vw;
-  }
   h1 {
     font-size: clamp(0.6rem, 6vw + 0.6rem, 1.5rem);
   }
@@ -461,9 +498,10 @@ p {
     font-size: var(--small);
   }
 
-  .body {
-    width: 100vw;
+  section {
+    padding: 0 5vw;
   }
+
   .logo {
     width: 5rem;
     margin: auto;
