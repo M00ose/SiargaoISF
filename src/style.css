@@ -403,6 +403,30 @@ p {
   transform: scale(110%);
 }
 
+.footer {
+  margin: 1vh 5vw;
+  padding: 1rem 3rem;
+  background-image: linear-gradient(45deg, var(--yellow), var(--orange));
+  color: var(--white);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.footer > p {
+  font-weight: bold;
+}
+
+.footer > ul {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.contact {
+  display: flex;
+  gap: 3rem;
+}
+
 /* Animations */
 
 @keyframes fadeInUp {
@@ -476,6 +500,16 @@ p {
 
   .about-content > p {
     text-align: left;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  .footer > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
 @media (max-width: 600px) {
