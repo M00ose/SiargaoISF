@@ -17,7 +17,7 @@
   --secondary: "Montserrat", Tahoma, sans-serif;
 
   --large: clamp(1rem, 10vw + 1rem, 3.2rem);
-  --medium: clamp(0.75rem, 7.5vw + 0.75rem, 2rem);
+  --medium: clamp(0.75rem, 5vw + 0.75rem, 2rem);
   --small: clamp(0.3rem, 3vw + 0.3rem, 1.75rem);
   --extra-small: clamp(0.15rem, 1.5vw + 0.15rem, 1rem);
 }
@@ -75,7 +75,7 @@ h4 {
 p {
   margin-bottom: 1rem;
   font-family: var(--secondary);
-  font-size: var(--extra-small);
+  font-size: var(--small);
   animation: fadeInUp 1s ease-in-out 0.5;
 }
 
@@ -282,11 +282,13 @@ p {
 
 /* Temporary hero content */
 .hero-bg {
-  width: 40vw;
+  max-width: 40vw;
   height: auto;
+  max-height: 80vh;
   box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
   -webkit-box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
   -moz-box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .hero {
@@ -297,34 +299,25 @@ p {
   padding: 3rem 10rem;
 }
 
-.tree {
-  height: 80vh;
-  left: -40vh;
-  top: 10vh;
-  transform: rotate(15deg);
-  animation: tree-animation 1s ease-in-out;
+.date-container {
+  text-align: center;
 }
 
-.wave {
-  top: 35vh;
-  right: 5vh;
-  height: 25rem;
-  animation: wave-animation 1s ease-in-out;
-  z-index: 0;
+.date-animate {
+  font-size: 8vw;
+  line-height: 1;
+  color: var(--orange);
+
+  background-image: url("../assets/Elements/wave.jpg");
+  background-size: 200%;
+  background-clip: text;
+  --webkit-background-clip: text;
+  color: transparent;
+  animation: bg-animation 8s infinite alternate ease-in-out;
 }
 
-.surfer {
-  top: 55vh;
-  right: 15vh;
-  height: 12rem;
-  transform: scaleX(-1) rotate(20deg);
-  animation: surfer-animation 2s ease-in-out;
-  z-index: 0;
-}
-
-.sponsors {
-  height: 20vh;
-  margin-bottom: 3rem;
+.date-mobile {
+  display: none;
 }
 
 .grid-container {
@@ -383,6 +376,21 @@ p {
   margin-top: 5rem;
 }
 
+.about-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.about-content > p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.social {
+  position: relative;
+  bottom: 20vh;
+}
+
 .socmed {
   height: 4rem;
   width: 4rem;
@@ -408,33 +416,6 @@ p {
   }
 }
 
-@keyframes tree-animation {
-  0% {
-    left: -50%;
-  }
-  100% {
-    left: -40vh;
-  }
-}
-
-@keyframes wave-animation {
-  0% {
-    right: -50%;
-  }
-  100% {
-    right: 0;
-  }
-}
-
-@keyframes surfer-animation {
-  0% {
-    right: -50%;
-  }
-  100% {
-    right: 15vh;
-  }
-}
-
 @keyframes bg-animation {
   0% {
     background-position: left;
@@ -447,33 +428,13 @@ p {
 /* Media Queries */
 @media (max-width: 960px) {
   body {
-    width: 100vw;
-    padding: 10vh 0;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0 3vw;
   }
+
   .hamburger > * {
     display: block;
-  }
-  /* .tree,
-  .wave,
-  .surfer {
-    display: none;
-  } */
-
-  .hero {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .hero-bg {
-    width: 100%;
-    height: auto;
-  }
-
-  .hero-content {
-    padding: 0 5vw;
   }
 
   .desktop-main-menu {
@@ -484,29 +445,93 @@ p {
     display: block;
   }
 
-  .title,
-  .description,
-  p {
-    font-size: var(--small);
+  .logo {
+    margin-left: 2rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 5vh 0;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-bg {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    width: auto;
+    height: 75vh;
+    margin-bottom: 5rem;
+  }
+
+  .date-container {
+    margin-top: 15vh;
+  }
+
+  .date-animate {
+    font-size: 9vw;
+    word-break: break-all;
+  }
+
+  .about-content > p {
+    text-align: left;
   }
 }
 @media (max-width: 600px) {
   h1 {
-    font-size: clamp(0.6rem, 6vw + 0.6rem, 1.5rem);
+    font-size: var(--medium);
+    word-break: normal;
   }
   h2 {
     font-size: var(--small);
   }
 
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   section {
-    padding: 0 5vw;
+    padding: 0;
+    margin: 20vh 0;
+  }
+
+  .hero {
+    margin-top: 5vh;
+  }
+
+  .hero-bg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .date-animate {
+    display: none;
+  }
+
+  .date-mobile {
+    display: block;
+    font-size: 25vw;
   }
 
   .logo {
     width: 5rem;
     margin: auto;
   }
-  .item {
-    width: 80vw;
+
+  .about-content {
+    flex-direction: column;
+    padding: 10vw;
+  }
+
+  .about-content > p {
+    text-align: center;
+  }
+
+  .social {
+    margin: 0;
+    padding: 0;
   }
 }
