@@ -386,6 +386,11 @@ p {
   text-justify: inter-word;
 }
 
+.sponsor-note {
+  margin-top: 4rem;
+  font-style: italic;
+}
+
 .social {
   position: relative;
   bottom: 20vh;
