@@ -570,7 +570,7 @@ p {
   }
 
   .social {
-    margin: 0;
+    margin-top: 30vh;
     padding: 0;
   }
 }
