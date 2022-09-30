@@ -400,6 +400,7 @@ p {
   height: 4rem;
   width: 4rem;
   padding: 0.1rem 0.2rem;
+  margin: 0 1vh;
   border: 0.3rem solid var(--white);
   border-radius: 1rem;
 }
