@@ -311,7 +311,7 @@ p {
   background-image: url("../assets/Elements/wave.jpg");
   background-size: 200%;
   background-clip: text;
-  --webkit-background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   animation: bg-animation 8s infinite alternate ease-in-out;
 }
