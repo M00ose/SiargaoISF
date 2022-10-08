@@ -11,14 +11,14 @@
     <meta name="robots" content="index,follow" />
     <title>Siargao ISF</title>
     <link rel="shortcut icon" href="./assets/Logo/26th Siargao International Surfing Festival_Logo_2-08.png" type="image/x-icon">
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/stylev2.css" />
   </head>
   <body>
     <div id="overlay"></div>
     <div id="mobile-menu" class="mobile-main-menu">
       <ul>
         <li class="mobile-only"><a class="side-menu" href="index.html">Home</a></li>
-        <!-- <li class="mobile-only"><a class="side-menu" href="#activities">Activities</a></li> -->
+        <li class="mobile-only"><a class="side-menu" href="#activities">Activities</a></li>
         <li class="mobile-only"><a class="side-menu" href="#about">About Us</a></li>
         <li class="mobile-only"><a class="side-menu" href="#socials">Socials</a></li>
       </ul>
@@ -26,13 +26,13 @@
     <header class="main-header">
       <div class="logo">
         <a href="index.html"
-          ><img src="./assets/Logo/26th Siargao International Surfing Festival_Logo_2-08.png" alt="Siargao International Surfing Festival"
+          ><img data-src="./assets/Logo/26th Siargao International Surfing Festival_Logo_2-08.png" alt="Siargao International Surfing Festival"
         /></a>
       </div>
       <nav class="desktop-main-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <!-- <li><a href="#activities">Activities</a></li> -->
+          <li><a href="#activities">Activities</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#socials">Socials</a></li>
         </ul>
@@ -51,16 +51,49 @@
           Join us as we celebrate a week-long festival to reignite the
           solidarity of the people in helping the island recover.
         </h4>
-        <h4 class="sponsors-intro hidden">Presented By:</h4>
-        <div class="sponsors hidden"></div>
+      </div>
+    </section>
+    <section class="sponsors" id="sponsor">
+      <img data-src="./assets/Elements/elements-01.png" alt="Coconut Trees" class="icon tree-left fade-in">
+      <img data-src="./assets/Elements/elements-01.png" alt="Coconut Trees" class="icon tree-right fade-in">
+      <img data-src="./assets/Elements/elements-02.png" alt="Hut" class="icon hut fade-in">
+      <img data-src="./assets/Elements/elements-11.png" alt="Surfer" class="icon surfer from-right slide-in">
+      <div class="sponsors-container">
+        <p>Title sponsor</p>
+        <div class="sponsor-logo-container">
+          <img data-src="./assets/Sponsors/Logos/Webp/San Miguel Corp-02.webp" alt="Hello" class="sponsorLogo cropped">
+        </div>
+        <p>Platinum Sponsor</p>
+        <div class="sponsor-logo-container">
+          <img data-src="./assets/Sponsors/Logos/Webp/Smart-06.webp" alt="Smart" class="sponsorLogo long">
+          <img data-src="./assets/Sponsors/Logos/Webp/Seaoil-03.webp" alt="SeaOil" class="sponsorLogo long">
+          <img data-src="./assets/Sponsors/Logos/Webp/Sheirman-18.webp" alt
+          ="Sheirman" class="sponsorLogo long">
+        </div>
+        <p>Supported By</p>
+        <div class="sponsor-logo-container">
+          <img data-src="./assets/LGU Logos/webp/bagtik-moserbisyo.webp" alt="Bagtik Moserbisyo" class="sponsorLogo">
+          <img data-src="./assets/LGU Logos/webp/Department_of_Tourism__DOT_.svg.webp" alt="Department of Tourism" class="sponsorLogo">
+          <img data-src="./assets/LGU Logos/webp/General-Luna-Logo-Siargao.webp" alt="General Luna Siargao" class="sponsorLogo">
+          <img data-src="./assets/LGU Logos/webp/Seal_of_the_Philippine_House_of_Representatives-01_1.webp" alt="Philippine House of Representatives" class="sponsorLogo">
+        </div>
+        <p>Presented By</p>
+        <div class="sponsor-logo-container">
+          <p>Congressman Bingo Matugas</p>
+          <p>The Municipality of General Luna</p>
+        </div>
+        <div class="sponsor-logo-container"></div>
+        <p>Sanctioned By</p>
+        <div class="sponsor-logo-container">
+        </div>
       </div>
     </section>
     <section class="date-container">
       <h1>See you on</h1>
        <h1 class="date-animate fade-in">October 15-21, 2022</h1>  
-       <h1 class="date-animate fade-in date-mobile">Oct 15<br>-<br>20,<br>2022</h1>       
+       <h1 class="date-animate fade-in date-mobile">Oct 15<br>-<br>21,<br>2022</h1>       
     </section>
-    <!-- <section class="activities" id="activities">
+    <section class="activities" id="activities">
       <div>
         <h1 class="fade-in">Festival Activities</h1>
       </div>
@@ -154,7 +187,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     </section>
     <section class="about" id="about">
       <h1 class="fade-in">About Us
@@ -165,7 +198,6 @@
         <p>After two years, the Siargao International Surfing Festival is finally back, bigger and better. This year’s celebration is in honor of all the Surigaonons especially the ones who stood tall for their families, friends, and the community despite all the difficulties.
         </p>
       </div>
-      <p class="sponsor-note fade-in">Presented by San Miguel Corporation, Congressman Bingo Matugas & The Municipality of General Luna, sanctioned by the WSL.</p>
     </section>
     <section class="social" id="socials">
       <h2 class="fade in">For More Updates, Follow Us Here</h2>
@@ -202,20 +234,20 @@
       <ul>
         <div class="contact">
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail fade-in" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <rect x="3" y="5" width="18" height="14" rx="2" />
               <polyline points="3 7 12 13 21 7" />
             </svg>
           </div>
-          <p>info@siargaoisf.ph</p>
+          <p class=fade-in>info@siargaoisf.ph</p>
         </div>
         <div class="contact">
-          <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone fade-in" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
           </svg></div>
-          <p>(+63) 908 986 9873</p>
+          <p class=fade-in>(+63) 908 986 9873</p>
         </div>
       </ul>
     </div>
