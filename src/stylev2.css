@@ -436,6 +436,7 @@ p {
   display: grid;
   gap: 1rem;
   max-width: 100vw;
+  text-align: center;
 }
 
 .sponsors-container > p,
@@ -459,18 +460,25 @@ p {
 
 .sponsorLogo {
   display: block;
-  height: 3rem;
+  height: 5rem;
   width: auto;
 }
 
 .cropped {
-  height: 7em;
-  width: 9rem;
+  height: 10em;
+  width: 15rem;
   object-fit: cover;
 }
 
 .sponsorLogo.long {
-  height: 1.2rem;
+  height: 3rem;
+  width: auto;
+}
+
+.sponsorLogo:hover,
+.sponsor-logo-container > p:hover {
+  transform: scale(150%);
+  transition: transform 300ms ease-in;
 }
 
 .social {
@@ -635,6 +643,10 @@ p {
     margin-bottom: 0;
   }
 
+  .sponsor-logo-container {
+    flex-direction: column;
+  }
+
   .date-animate {
     display: none;
   }
@@ -642,6 +654,10 @@ p {
   .date-mobile {
     display: block;
     font-size: 25vw;
+  }
+
+  .item {
+    margin: 0 1rem;
   }
 
   .logo {
