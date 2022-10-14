@@ -345,17 +345,22 @@ p {
   border-bottom: inherit;
 }
 
+.content {
+  margin-top: 1rem;
+}
+
 .title,
-.description {
+.header,
+.description,
+.content > h6,
+.content > p {
   font-size: var(--extra-small);
-  padding: 0;
-  margin: 1rem 0 1rem 0;
   color: var(--white);
   animation: fadeInUp 1s ease-in-out;
 }
 
-.subtitle {
-  font-size: clamp(0.05rem, 0.5vw + 0.1rem, 0.5rem);
+.content > h6 {
+  font-family: var(--secondary);
 }
 
 .item {
@@ -373,7 +378,6 @@ p {
   text-align: left;
 }
 
-.activities,
 .events,
 .about,
 .social {
