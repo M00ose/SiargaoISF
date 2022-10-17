@@ -629,6 +629,11 @@ p {
     align-items: center;
     gap: 1rem;
   }
+
+  .content > h6,
+  .content > p {
+    font-size: var(--small);
+  }
 }
 @media (max-width: 600px) {
   h1 {
