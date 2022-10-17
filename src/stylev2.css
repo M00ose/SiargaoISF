@@ -630,6 +630,10 @@ p {
     gap: 1rem;
   }
 
+  .content > h6 {
+    font-family: var(--primary);
+  }
+
   .content > h6,
   .content > p {
     font-size: var(--small);
