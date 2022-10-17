@@ -479,10 +479,8 @@ p {
   width: auto;
 }
 
-.cropped {
-  height: 10em;
-  width: 15rem;
-  object-fit: cover;
+.sponsorLogo.title {
+  height: 10rem;
 }
 
 .sponsorLogo.long {
@@ -492,8 +490,8 @@ p {
 
 .sponsorLogo:hover,
 .sponsor-logo-container > p:hover {
-  transform: scale(150%);
-  transition: transform 300ms ease-in;
+  transform: scale(110%);
+  transition: transform 100ms ease-in;
 }
 
 .social {
