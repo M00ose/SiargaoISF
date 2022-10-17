@@ -616,6 +616,10 @@ p {
     padding: 0;
   }
 
+  .sponsors {
+    max-height: fit-content;
+  }
+
   .icon {
     display: none;
   }
