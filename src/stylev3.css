@@ -273,26 +273,20 @@ p {
 }
 
 .hero {
+  position: relative;
+  height: 100vh;
   padding: 0;
-  margin: 10vh 0 0 0;
+  margin: 0;
 }
 
-.hero-bg {
-  max-width: 40vw;
-  height: auto;
-  max-height: 80vh;
-  box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
-  -webkit-box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
-  -moz-box-shadow: 1px 6px 9px -4px rgba(163, 102, 62, 0.75);
-  animation: fadeInUp 1s ease-in-out;
-}
 
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  padding: 3rem 10rem;
+.aftermovie {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
 .date-container {
@@ -583,22 +577,6 @@ p {
     margin-left: 2rem;
   }
 
-  .hero {
-    flex-direction: column;
-    padding: 5vh 0;
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .hero-bg {
-    margin: 0;
-    padding: 0;
-    max-width: 100vw;
-    width: auto;
-    height: 75vh;
-    margin-bottom: 5rem;
-  }
-
   .date-container {
     margin-top: 15vh;
   }
@@ -660,16 +638,6 @@ p {
   section {
     padding: 0;
     margin: 20vh 0;
-  }
-
-  .hero {
-    margin-top: 5vh;
-  }
-
-  .hero-bg {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0;
   }
 
   .sponsor-logo-container {
