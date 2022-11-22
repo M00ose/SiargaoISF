@@ -469,12 +469,12 @@ p {
 
 .sponsorLogo {
   display: block;
-  height: 5rem;
+  height: 4rem;
   width: auto;
 }
 
 .sponsorLogo.title {
-  height: 10rem;
+  height: 9rem;
 }
 
 .sponsorLogo.long {
